@@ -33,7 +33,7 @@ build = {
     type = 'command',
     build_command = [[
         git clone https://github.com/facebook/thpp/
-        cd thpp/thpp; THPP_NOFB=1 ./build.sh; cd ../..
+        cd thpp/thpp; THPP_NOFB=; FB="-DNO_TESTS=ON -DNO_THRIFT=ON -DNO_FOLLY=ON"; ./build.sh; cd ../..
 
         cd fblualib/python
         cmake -E make_directory build &&
